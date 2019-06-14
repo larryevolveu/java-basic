@@ -13,13 +13,6 @@ public class ContainerTest {
     @Test
     public void containerArea() {
 
-        int ii = 5;
-        long ll = 123456789;
-        double dd = 1.23456;
-        boolean bb = true;
-        byte by = 12;
-        String ss = "A String";
-
         ArrayList<Shape> shapes = new ArrayList<Shape>();
         shapes.add(new Circle(3));
         shapes.add(new Rectangle(2.0,3.0));
