@@ -6,7 +6,7 @@ public abstract class Shape extends Line {
 
     public Shape() {
         System.out.println("In Shape Constructor");
-        this.count++;
+        count++;
     }
 
     public abstract double area();
@@ -15,6 +15,14 @@ public abstract class Shape extends Line {
 
     public String doSomething() {
         return "stuff";
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Shape.count = count;
     }
 
 }

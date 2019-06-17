@@ -6,34 +6,28 @@ import com.evolveu.shape.Shape;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 public class ContainerTest {
 
     @Test
     public void containerArea() {
 
-        ArrayList<Shape> shapes = new ArrayList<Shape>();
+        ArrayList<Shape> shapes = new ArrayList<>();
         shapes.add(new Circle(3));
         shapes.add(new Rectangle(2.0,3.0));
         shapes.add(new Circle(5.));
 
-        Logger l = Logger.getLogger(ContainerTest.class.getName());
-        l.info("Where are you going to print?");
-        l.info(l.getName());
-        l.info(this.toString());
-        l.info(this.getClass().getName());
-
-
         System.out.println("The size is: " + shapes.size());
 
-        Shape containers[] = new Shape[shapes.size()];
+        Shape[] containers = shapes.toArray(new Shape[shapes.size()]);
 
 
-//        warning("There is life out there");
-
+        double area = 0.0;
         for(int i = 0; i < containers.length; i++ ) {
 
+            System.out.println("i: " + i);
+            area = area + containers[i].area();
+            System.out.println("Area: " + area);
         }
 
 
